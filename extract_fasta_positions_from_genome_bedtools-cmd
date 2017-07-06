@@ -1,0 +1,5 @@
+bedtools getfasta -fi /media/anavarro/Data4/Genome_transcriptome_data/Genome-data/Niobv3_genome/nicObt_NEW.fa -bed Niob_ATs_positions_gnm.bed -fo fasta 
+
+#if name colum is to be used to rename the seqs
+bedtools getfasta -fi /media/anavarro/Data4/Genome_transcriptome_data/Genome-data/Niobv3_genome/nicObt_NEW.fa -bed Niob_ATs_positions_gnm.bed -fo fasta -name 
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+while read line
+do
+        grep $line $2 >> newlist.txt
+done <$1
