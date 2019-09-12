@@ -1,0 +1,3 @@
+samtools sort -n Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_common.sam Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_common.sorted
+samtools sort -n Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_orig.sam Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_orig.sorted
+samtools sort -n Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_other.sam Nobtusiata10-27_ctlx1_vs_Niatt.sorted.out_other.sorted

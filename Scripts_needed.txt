@@ -1,0 +1,5 @@
+Script to detect hybrid contig assemblies from RNAseq data (see detect_hybrids.pl which detects hybrid reads comparing to the Arabidopsis annotation)
+
+
+PAML automater
+PAML parser

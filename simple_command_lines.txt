@@ -1,0 +1,67 @@
+- a oneliner to execute samtools sequentially (in this case display mapping stats)
+ls -l *.bam | for sample in *.bam; do echo $sample ; samtools view -c ${sample} >> all_mapping_stats ; done
+
+
+- To print file names (in this case files.bam) TWICE (one after the other) into a file
+
+ls -l */*.bam | awk '{print $9 " " $9}' > new_filename
+
+
+- To print the number of characters per line (from a text file)
+
+awk '{ print length($0); }' abc.txt
+
+- To split a (NOT too) large fasta file:
+
+awk 'BEGIN {n_seq=0;} /^>/ {if(n_seq%1000==0){file=sprintf("myseq%d.fa",n_seq);} print >> file; n_seq++; next;} { print >> file; }' < sequences.fa
+
+
+- To rename multiple files at once:
+
+rename 's/\.html$/\.php/' *.html
+
+
+Use -n to check before renaming:
+
+rename -n 's/\.php$/\.html/' *.php
+
+
+Other example, rename all lower case to all upper case:
+rename 'y/a-z/A-Z/' *.html
+
+
+# 'echo' is a safety feature
+
+
+
+- To substitute a character in multiple files
+
+find . -name *.txt -type f -exec sed -i 's/foo/bar/g' {} \;
+
+
+- To fuse multiple fasta into one fasta
+
+awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < file.fa
+
+
+
+- To insert a string at the beginning of text
+
+sed -i '1s/.*$/New Text\n&/g' filename
+
+
+- Eliminate all "x chars" from file
+
+ sed '/x chars/d' filename
+
+
+- using bash (bash awk, sed) to read a file and extract word matching prefix between quotes (recursive)
+
+awk -F\" '{for (i=2;i<=NF;i+=2) if ($i ~/^[[:space:]]*PATTERN/ ) {print $i;next}}'
+
+
+
+-  to extract just the lines with specific line numbers from a file 
+
+gawk 'FNR==NR {line[$1]; next} NR in line' line_numbers file_name
+

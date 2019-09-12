@@ -1,0 +1,3 @@
+scp Nobtusiata60-58_OS_t1x3_*_trim.fq.gz anavarro@10.68.2.198:/home/likewise-open/ICE/anavarro/database/
+
+scp Nobtusiata60-58_*.bam anavarro@10.84.0.190:/home/likewise-open/ICE/anavarro/RNAseq_work/analysis_w_STAR/
